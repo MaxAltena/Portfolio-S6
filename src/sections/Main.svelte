@@ -87,19 +87,6 @@
 		wordt er de volgende keer ook betere afspraken gemaakt over de definition of done en hoe de workflow eruit ziet
 		op GitHub.
 	</p>
-
-	<p in:fly="{{ ...animation, delay: (delay += 25) }}">
-		Het in mijn vrije tijd nog iets doen aan het project moet ik de komende projecten verminderen. Zo heb ik te
-		weinig tijd overgehouden aan het maken van een portfolio voor het halen van het semester. Hiernaast ook het tijd
-		nemen door de week in om sommige projectdagen meer voor mezelf iets aan het portfolio te doen.
-	</p>
-
-	<p in:fly="{{ ...animation, delay: (delay += 25) }}">
-		Het samenwerken met de stichting vond ik erg fijn. Niet alleen met Stephan maar ook met de deelnemers bij de
-		stichting. Het wat een unieke kans om op locatie te zitten met de doel- en publieksgroep en samen met hen een
-		product te ontwikkelen. Helaas was het aan het einde van het project niet mogelijk om het product te testen om
-		het te valideren door het COVID-19 virus.
-	</p>
 </main>
 
 <style>
