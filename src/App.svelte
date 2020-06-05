@@ -1,14 +1,6 @@
 <script>
 	import { Router, Route } from "svelte-routing";
-	import { scrollY, name, semester, firstName, lastName, fullName, products } from "./utils/stores";
 
-	import PageWrapper from "./components/PageWrapper.svelte";
-	import Page from "./components/Page.svelte";
-	import Leeswijzer from "./routes/Leeswijzer.svelte";
-
-	import Header from "./sections/Header.svelte";
-	import Main from "./sections/Main.svelte";
-	import TooltipForDarkmode from "./utils/TooltipForDarkmode.svelte";
 	import FixedBanner from "./utils/FixedBanner.svelte";
 
 	export let url = "";
@@ -17,17 +9,18 @@
 	$: document.title = `${$name} ${$semester} – ${$fullName}`;
 </script>
 
-<svelte:window bind:scrollY="{$scrollY}" />
-
 <div class="accent" role="presentation"></div>
 
 <Router {url} {basepath}>
 	<Route path="/">
-		<div>
-			Navigeer naar 1 van de 2 portfolio's:
-			<a href="project1/">Project 1 (Stichting Ik Wil)</a>
-			<a href="project2/">Project 2 (PIDZ)</a>
-		</div>
+		<main>
+			<p>In Semester 6 zijn er twee portfolio's gemaakt.</p>
+			<p>Navigeer naar ze door middel van de onderstaande links:</p>
+			<ul>
+				<li><a href="project1/">Project 1 (Stichting Ik Wil)</a></li>
+				<li><a href="project2/">Project 2 (PIDZ)</a></li>
+			</ul>
+		</main>
 	</Route>
 </Router>
 
@@ -44,6 +37,20 @@
 		right: 0;
 		background: var(--accent);
 		transition: background var(--transition-speed) var(--transition-timing);
+	}
+
+	main {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 	}
 
 	:global(hr) {
