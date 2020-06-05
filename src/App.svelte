@@ -6,7 +6,7 @@
 	export let url = "";
 	export let basepath = process.env.isProd ? "S6" : "";
 
-	$: document.title = `${$name} ${$semester} – ${$fullName}`;
+	$: document.title = `Portfolio S6 – Max Altena`;
 </script>
 
 <div class="accent" role="presentation"></div>
