@@ -88,11 +88,8 @@
 		color: var(--primary);
 	}
 
-	ul {
-		margin: 0.5em 0 0 0;
-	}
-
 	li {
 		list-style-type: none;
+		margin: 0.5em 0 0 0;
 	}
 </style>
