@@ -53,43 +53,38 @@
 		flex-direction: column;
 	}
 
-	:global(hr) {
-		width: 95%;
-		margin: 20px auto;
-		border-width: 1px;
-		border-style: solid;
-		border-color: var(--on-primary);
-		border-radius: 999px;
-		opacity: 0.25;
-		transition: border-color var(--transition-speed) var(--transition-timing);
-	}
-
-	:global(a.link) {
+	a {
+		cursor: pointer;
 		color: var(--on-primary);
 		transition: color calc(var(--transition-speed) / 2) var(--transition-timing);
 		text-decoration: none;
+
+		padding: 4px;
 		position: relative;
 	}
 
-	:global(a.link::after) {
+	a::after {
 		content: "";
 		position: absolute;
-		bottom: -1px;
-		left: -1px;
-		right: -1px;
-		width: calc(100% + 2px);
-		height: 2px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 4px;
 		border-radius: 4px;
 		background: var(--accent);
 		z-index: -1;
-		transition: height calc(var(--transition-speed) / 2) var(--transition-timing);
+		transition: height calc(var(--transition-speed) / 2) var(--transition-timing),
+			background var(--transition-speed) var(--transition-timing);
 	}
 
-	:global(a.link:hover::after, a.link:active::after) {
-		height: calc(100% + 2px);
+	a:hover::after,
+	a:active::after {
+		height: 100%;
 	}
 
-	:global(a.link:hover, a.link:active) {
+	a:hover,
+	a:active {
 		color: var(--primary);
 	}
 </style>
